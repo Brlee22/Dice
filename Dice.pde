@@ -48,7 +48,7 @@ class Die //models one single dice cube
 	void show()
 	{
 		//your code here
-		fill(255, 255, 255);
+		fill(120, 120, 120);
 		rect(diceX, diceY, 50, 50);
 		
 		if(numDots == 1){
@@ -95,19 +95,7 @@ class Die //models one single dice cube
 			ellipse(diceX + 10, diceY + 10, 10, 10);
 			totalValue += 5;
 		}
-		else
-		{
-			noStroke();
-			fill(156, 0, 76);
-			ellipse(diceX + 40, diceY + 10, 10, 10);
-			ellipse(diceX + 40, diceY + 40, 10, 10);
-			ellipse(diceX + 10, diceY + 40, 10, 10);
-			ellipse(diceX + 10, diceY + 10, 10, 10);
-			ellipse(diceX + 10, diceY + 25, 10, 10);
-			ellipse(diceX + 40, diceY + 25, 10, 10);	
-			totalValue += 6;
-			
-		}
+	
 
 
 	}
