@@ -1,6 +1,6 @@
 void setup()
 {
-	size(500, 500);
+	size(600, 600);
 	noLoop();
 }
 
@@ -11,12 +11,12 @@ void draw()
 	background(0, 0, 0);
 	for (int i = 25; i < 400; i += 100) {
 		for(int j = 25; j < 400; j += 100){
-		Dice diceOne = new Dice(i, j);
-		diceOne.show();
-		diceOne.roll();
+		Die dieOne = new Die(i, j);
+		dieOne.show();
+		dieOne.roll();
 		}
 	}
-	fill(255, 255, 255);
+	fill(240, 240, 240);
 	textSize(30);
 	text("Total: " + totalValue, 150, 450);
 	
@@ -25,10 +25,9 @@ void draw()
 void mousePressed()
 {
 	redraw();
-	redraw();
 	totalValue = 0;
 }
-class Dice //models one single dice cube
+class Die //models one single dice cube
 {
 
 	int diceX, diceY, numDots;//variable declarations here
@@ -42,11 +41,9 @@ class Dice //models one single dice cube
 	void roll()
 	{
 		
-		//your code here
 	}
 	void show()
 	{
-		//your code here
 		fill(120, 120, 120);
 		rect(diceX, diceY, 50, 50);
 		
@@ -94,7 +91,7 @@ class Dice //models one single dice cube
 			ellipse(diceX + 10, diceY + 10, 10, 10);
 			totalValue += 5;
 		}
-		else if(numDots == 6)
+		else
 		{
 			noStroke();
 			fill(156, 0, 76);
@@ -107,6 +104,7 @@ class Dice //models one single dice cube
 			totalValue += 6;
 			
 		}
-	
+
+
 	}
 }
